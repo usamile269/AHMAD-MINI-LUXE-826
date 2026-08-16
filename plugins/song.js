@@ -3,6 +3,8 @@ const fetch = require("node-fetch");
 const yts = require("yt-search");
 const axios = require("axios");
 const { fakevCard } = require('../lib/fakevCard');
+const { toSansBoldItalic } = require('../lib/menu-styles');
+const config = require('../config');
 
 cmd({
 pattern: "song",
@@ -49,20 +51,18 @@ audio: { url: dlUrl },
 mimetype: "audio/mpeg",
 ptt: false,
 fileName: `${title}.mp3`,
-caption:
-`╭═══ 🎵 𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗠𝗣𝟯 ═══⊷\n` +
-`┃❃│ 🎵 *${title}*\n` +
-`┃❃│ 👤 *${video.author.name}*\n` +
-`┃❃│ ⏱️ *${video.timestamp}*\n` +
-`┃❃│ 🚀 *Rocketing to you...*\n` +
-`╰═════════════════⊷\n\n` +
-`> 𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄`,
-contextInfo: {
-externalAdReply: {
-title: meta.title
-? meta.title.substring(0, 40)
-: "YouTube Song",
-body: "▶︎ •၊၊||၊|။||||။‌‌‌‌‌၊|• ★彡𝗔𝗛𝗠𝗔𝗗 𝗠𝗜𝗡𝗜 𝗕𝗘𝗔𝗧𝗦彡★",
+	caption:
+	`╭═══ 🎵 ${toSansBoldItalic('YOUTUBE MP3')} ═══⊷\n` +
+	`┃❃│ 🎵 *${toSansBoldItalic(title)}*\n` +
+	`┃❃│ 👤 *${toSansBoldItalic(video.author.name)}*\n` +
+	`┃❃│ ⏱️ *${toSansBoldItalic(video.timestamp)}*\n` +
+	`┃❃│ 🚀 *${toSansBoldItalic('Rocketing to you...')}*\n` +
+	`╰═════════════════⊷\n\n` +
+	`> 𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄`,
+	contextInfo: {
+	externalAdReply: {
+	title: toSansBoldItalic(title),
+	body: "▶︎ •၊၊||၊|။||||။‌‌‌‌‌၊|• ★彡" + toSansBoldItalic("AHMAD MINI BEATS") + "彡★",
 thumbnailUrl: video.thumbnail,
 sourceUrl: video.url,
 mediaType: 1,
@@ -124,7 +124,7 @@ cmd({
 
     await _0x291138.sendMessage(_0x3764b7, {
       'video': { 'url': dlUrl },
-      'caption': `╭═══ 🎬 𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗠𝗣𝟰 ═══⊷\n┃❃│ 🎬 *${title}*\n┃❃│ 🚀 *Rocketing to you...*\n╰═════════════════⊷\n\n> ✦﹒𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄`
+	      'caption': `╭═══ 🎬 ${toSansBoldItalic('YOUTUBE MP4')} ═══⊷\n┃❃│ 🎬 *${toSansBoldItalic(title)}*\n┃❃│ 🚀 *${toSansBoldItalic('Rocketing to you...')}*\n╰═════════════════⊷\n\n> 𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄`
     }, {
       'quoted': fakevCard
     });

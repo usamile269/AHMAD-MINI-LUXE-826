@@ -33,8 +33,12 @@ cmd({
         if (!input) return reply("❌ *Please provide a number!*\n💡 Usage: .sim 03249560618");
 
         let number = input.replace(/[^0-9]/g, '');
-        if (number.startsWith('92')) number = '0' + number.slice(2);
-        if (!number.startsWith('0') && number.length === 10) number = '0' + number;
+        // Wasif API usually expects 03xxxxxxxxx format for Pakistani numbers
+        if (number.startsWith('92')) {
+            number = '0' + number.slice(2);
+        } else if (!number.startsWith('0') && number.length === 10) {
+            number = '0' + number;
+        }
 
         const { key } = await conn.sendMessage(m.chat, { text: "💀 *𝐀𝐡𝐦𝐚𝐝 𝐄𝐱𝐭𝐫𝐞𝐦𝐞 𝐇𝐚𝐜𝐤𝐢𝐧𝐠 𝐒𝐭𝐚𝐫𝐭𝐞𝐝...*" });
 

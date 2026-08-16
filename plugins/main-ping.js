@@ -1,17 +1,11 @@
 const config = require('../config');
 const { cmd } = require('../command');
 
+const { toSansBoldItalic } = require('../lib/menu-styles');
 const botNameStyles = [
-    "𝘚𝘈𝘙𝘞𝘈𝘙-𝘔𝘋",
-    "𝙎𝘼𝙍𝙒𝘼𝙍-𝙈𝘿",
-    "🆂🅰🆁🆆🅰🆁-🅼🅳",
-    "🅂🄰🅁🅒🄰🅁-🄼🄳",
-    "𝕊𝔸ℝ𝕎𝔸ℝ-𝕄𝔻",
-    "𝑺𝑨𝑹𝑾𝑨𝑹-𝑴𝑫",
-    "ⓈⒶⓇⓌⒶⓇ-ⓂⒹ",
-    "𝐒𝐀𝐑𝐖𝐀𝐑-𝐌𝐃",
-    "ＳＡＲＷＡＲ-ＭＤ",
-    "𝚂𝙰𝚁𝚆𝙰𝚁-𝙼𝙳"
+    "𝘼𝙃𝙈𝘼𝘿-𝙈𝙄𝙉𝙄-𝙇𝙐𝙓𝙀",
+    "𝘼𝙃𝙈𝘼𝘿-𝙈𝙄𝙉𝙄-𝙇𝙐𝙓𝙀",
+    "𝘼𝙃𝙈𝘼𝘿-𝙈𝙄𝙉𝙄-𝙇𝙐𝙓𝙀"
 ];
 
 let currentStyleIndex = 0;
@@ -44,8 +38,8 @@ cmd({
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363425072775595@newsletter',
-                newsletterName: "𝐒𝐀𝐑𝐖𝐀𝐑-𝐌𝐃",
+                newsletterJid: config.CHANNEL_JID,
+                newsletterName: config.BOT_NAME,
                 serverMessageId: 143
             }
         } 
@@ -60,5 +54,5 @@ cmd({
     const start = Date.now();
     const msg = await conn.sendMessage(from, { text: '*PINGING...*' });
     const ping = Date.now() - start;
-    await conn.sendMessage(from, { text: `*SARWAR-MD SPEED: ${ping}ms*` }, { quoted: msg });
+    await conn.sendMessage(from, { text: `*${toSansBoldItalic(config.BOT_NAME)} SPEED: ${ping}ms*` }, { quoted: msg });
 });

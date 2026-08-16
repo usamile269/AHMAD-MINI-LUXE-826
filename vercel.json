@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "ahmad-mini-luxe-pairing",
+  "builds": [
+    {
+      "src": "pair.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/pair.html"
+    },
+    {
+      "src": "/(site-settings|active|code|status|disconnect|ping|connect-all|update-config|verify-otp|stats|admin/verify-key|admin/site-settings)",
+      "dest": "https://web-production-f9f640.up.railway.app/$1"
+    }
+  ]
+}
