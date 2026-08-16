@@ -56,7 +56,7 @@ caption:
 `┃❃│ ⏱️ *${video.timestamp}*\n` +
 `┃❃│ 🚀 *Rocketing to you...*\n` +
 `╰═════════════════⊷\n\n` +
-`> ✦﹒𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄`,
+`> 𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄`,
 contextInfo: {
 externalAdReply: {
 title: meta.title

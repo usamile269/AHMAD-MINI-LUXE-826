@@ -2,7 +2,7 @@ const { cmd } = require('../ahmad-core');
 const crypto = require('crypto');
 const { randomFooter } = require('../lib/menu-styles');
 
-const FOOTER = "\n\n> ✦﹒𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄";
+const FOOTER = "\n\n> 𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄";
 const box = (title, body) => `╭═══ ${title} ═══⊷\n${body}\n╰═════════════════⊷${FOOTER}`;
 
 // ==================== BASE64 ====================

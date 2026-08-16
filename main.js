@@ -2511,15 +2511,15 @@ async function ahmadPair(number, res = null) {
                 // no fake sender, so the @lid mis-resolution bug can't
                 // recur, while every command using this shared `reply()`
                 // now shows the forwarded/channel look.
-                const forwardCtx = {
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: config.CHANNEL_JID || '120363427856127926@newsletter',
-                        newsletterName: config.BOT_NAME || 'MINI AHMAD V077',
-                        serverMessageId: 2
-                    }
-                };
+const forwardCtx = {
+    forwardingScore: 999,
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+        newsletterJid: config.CHANNEL_JID || '120363427856127926@newsletter',
+        newsletterName: config.BOT_NAME || 'MINI AHMAD V077',
+        serverMessageId: 2
+    }
+};
                 const reply = async (text) => {
                     // 🚨 FIX ("result chota box bara" — a one-line error like
                     // "❌ Use: .tiktokstalk <username>" was rendering inside

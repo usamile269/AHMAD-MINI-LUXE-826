@@ -91,7 +91,7 @@ module.exports = {
         '120363407376142647@newsletter',
         '120363428287033693@newsletter'
     ],
-    BOT_FOOTER: "✦﹒𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄",
+    BOT_FOOTER: "> 𝙊𝘽𝙎𝙄𝘿𝙄𝘼𝙉 𝙇𝙐𝙓𝙀 𝘼𝙃𝙈𝘼𝘿 𝙈𝙄𝙉𝙄",
     
     WORK_TYPE: process.env.WORK_TYPE || "public", 
 
