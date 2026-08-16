@@ -5,18 +5,14 @@ const SiteSettings = jsondb.model('SiteSettings');
 const KEY = 'site';
 
 const DEFAULTS = {
-    botName: 'AHMAD-MINI',
+    botName: '™ 𝑨𝑯𝑴𝑨𝑫 𝑴𝑰𝑵𝑰 ᥫᩣ',
     welcomeMsg: "Connected Successfully — you're all set!",
     welcomeVideo: '',
-    channelLink: '',
-    bgMusicUrl: '',
-    heroTagline: 'WhatsApp Pairing',
-    // 🆕 FEATURE (Bunty: "songs popup trigger se admin panel se"): when on,
-    // an attractive animated "🎵 Enable Sound" popup appears on page load
-    // (only if bgMusicUrl is set) instead of the silent toggle button —
-    // also doubles as the click-to-satisfy-browser-autoplay-restriction
-    // gesture, so the song can actually start playing right away.
-    audioPopupEnabled: false
+    channelLink: 'https://whatsapp.com/channel/0029VbCLBN8EwEk5DUkDta0K',
+    bgMusicUrl: 'https://res.cloudinary.com/qdskwzyn/video/upload/v1785497379/AhmadHosting_ms8v1ejbw6v6z0.mp3',
+    heroTagline: 'Luxury Cyber-Pink Pairing',
+    botImageUrl: 'https://res.cloudinary.com/qdskwzyn/image/upload/v1785495694/AhmadHosting_ms8u1aiw10x6yr.jpg',
+    audioPopupEnabled: true
 };
 
 async function getSiteSettings() {
