@@ -1,0 +1,8 @@
+# Ensures python3 (needed by yt-dlp-wrap at runtime) and ffmpeg are present
+# on the Railway build image, on top of the Node.js setup Nixpacks detects
+# automatically from package.json.
+[phases.setup]
+nixPkgs = ["nodejs", "python3", "ffmpeg"]
+
+[start]
+cmd = "node index.js"

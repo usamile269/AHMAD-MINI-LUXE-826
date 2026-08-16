@@ -1,0 +1,62 @@
+{
+  "name": "AHMAD-MD",
+  "description": "AHMAD-MD WhatsApp Bot - 600+ commands, Baileys/Node.js",
+  "logo": "https://i.ibb.co/9Hzw9RKL/jawadmd.jpg",
+  "repository": "https://github.com/ahmad-md",
+  "keywords": ["whatsapp", "bot", "baileys", "ahmad-md"],
+  "success_url": "/",
+  "stack": "heroku-22",
+  "buildpacks": [
+    { "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" }
+  ],
+  "env": {
+    "SESSION_ID": {
+      "description": "WhatsApp session ID (get one from the bot's pair page)",
+      "value": "MINI BOT",
+      "required": true
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection string — needed so settings/sessions survive restarts",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Command prefix",
+      "value": ".",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number, country code first, no + or spaces",
+      "required": true
+    },
+    "RAPID_API_KEY": {
+      "description": "RapidAPI key, needed for some downloader commands",
+      "required": false
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram bot token from @BotFather, used for pairing panel",
+      "required": false
+    },
+    "TELEGRAM_CHAT_ID": {
+      "description": "Your Telegram chat ID",
+      "required": false
+    },
+    "WORK_TYPE": {
+      "description": "public or private",
+      "value": "public",
+      "required": false
+    },
+    "AUTO_VIEW_STATUS": {
+      "value": "true",
+      "required": false
+    },
+    "AUTO_LIKE_STATUS": {
+      "value": "true",
+      "required": false
+    },
+    "RSS_LIMIT_MB": {
+      "description": "Memory (MB) at which the bot restarts itself cleanly before the host force-kills it. Heroku free/eco dynos have 512MB.",
+      "value": "400",
+      "required": false
+    }
+  }
+}
